@@ -13,12 +13,13 @@ const LetterForm = (props) => {
     const handleSubmit = (evt) => {
         evt.preventDefault();
         props.addLetter(formData);
-        console.log("formData = ", formData);
+        //console.log("formData = ", formData);
         setFormData(initialState);
         navigate(`/mailboxes/${formData.mailboxId}`);
     };
 
     const handleChange = ({ target }) => {
+        //console.log("target.name, target.value", target.name, target.value);
         setFormData({ ...formData, [target.name]: target.value });
     };
     return (

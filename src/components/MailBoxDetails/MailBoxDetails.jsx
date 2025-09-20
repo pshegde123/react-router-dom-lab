@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 
 const MailBoxDetails = (props) => {
-    console.log("props = ", props);
+    //console.log("props = ", props);
 
     const { mailboxId } = useParams();
     //console.log('mailboxId:', mailboxId);
@@ -11,9 +11,10 @@ const MailBoxDetails = (props) => {
     ));
 
     const selectedLetters = props.letters.filter((letter) => (
-        letter.mailboxId === Number(mailboxId)
+        Number(letter.mailboxId) === Number(mailboxId)
     ));
-    console.log("selectedLetters = ", selectedLetters);
+    //console.log("selectedLetters = ", selectedLetters);
+
     return (
         <div>
             <h2>Mailbox Details</h2>
